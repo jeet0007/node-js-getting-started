@@ -23,8 +23,6 @@ app.get('*', (req, res) => {
 
 //Connect Database
 connectDb();
-
-
 //Import Routes
 const userRoute = require('./api/routes/User');
 const gameRoute = require('./api/routes/Game');
