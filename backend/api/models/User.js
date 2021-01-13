@@ -1,23 +1,14 @@
-var mongoose = require('mongoose');
-var userSchima = new mongoose.Schema({
-    firstname: {
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+// -----
+const userSchema = new Schema({
+    name: {
         type: String,
-        required: true,
-        validate: () => Promise.reject(new Error('Firstname Required'))
-    },
-    lastName: {
-        type: String,
-        required: [true, "Lastname is required"],
-        validate: () => Promise.reject(new Error('lastname Required'))
+        required: true
     },
     email: {
         type: String,
-        required: [true, "Email is required"],
-        validate: {
-            validator: () => Promise.resolve(false),
-            message: "Email is required"
-        }
+        required: true
     }
-});
-
-module.exports = mongoose.model('User', userSchima);
+})
+module.exports = mongoose.model("User", userSchema, "users")
