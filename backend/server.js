@@ -11,26 +11,27 @@ const connectDb = require('./database');
 
 
 const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}.`);
+});
 //Set up return json format
 app.use(BodyParser.json()); // converts body into json
 app.use(BodyParser.urlencoded({ extended: false })); // exclude extra details
-app.use(cors());
+
 // Set up web 
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build'))
 })
-const users = require('./api/routes/User.js');
-app.use('/api/users', users);
 
 //Connect Database
 connectDb();
 //Import Routes
-const userRoute = require('./api/routes/User');
 const gameRoute = require('./api/routes/Game');
+const users = require('./api/routes/User.js');
 // API---
-app.use('/api/user', userRoute);
 app.use('/api/game', gameRoute);
+app.use('/api/users', users);
 
 process.on('SIGILL', error => {
     console.error(error);
