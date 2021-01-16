@@ -22,8 +22,8 @@
     "start": "node backend/server.js",
     "client": "cross-env NODE_PATH=src react-scripts start",
     "test": "NODE_PATH=src react-scripts test --env=jsdom",
-    "dev": "concurrently \"npm start\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "dev": "concurrently \"yarn start\" \"yarn run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install && yarn build",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
