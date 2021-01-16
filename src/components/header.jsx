@@ -11,6 +11,7 @@ export default class Header extends PureComponent {
                 />
             WWE
             </header>
+
         );
     }
 }
