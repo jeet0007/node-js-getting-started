@@ -1,0 +1,31 @@
+:root{
+    --orange : #ff8e33;
+    --black : #050309;
+}
+.w-col{
+    color: white;
+}
+.primary-img{
+    width: 500px;
+    height: 500px;
+    border-width: 2px;
+    border-bottom:solid gray;
+    object-fit: contain;
+}
+.tit{
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+    font-variant: small-caps;
+}
+.sub{
+    color:var(--orange);
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+.imgBg{
+    background-image:  url("https://www.wwe.com/f/2020/03/20200316_RAW_StoneCold_Stunner--6b09224b21abf6c2327150e775a67529.jpg");
+    background-blend-mode: darken;
+    background-clip: content-box;
+}
