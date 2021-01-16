@@ -5,7 +5,7 @@ import './banner.css'
 export default class Banner extends PureComponent {
     render() {
         return (
-            <div className="component-banner">
+            <div className="component-banner ">
                 <div className="container-fluid imgBg">
                     <div className="row">
                         <div className="col-xs-6 col-md-6">

@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 //Set up return json format
 app.use(BodyParser.json()); // converts body into json
 app.use(BodyParser.urlencoded({ extended: false })); // exclude extra details
-
+app.use(cors());
 // Set up web 
 app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
